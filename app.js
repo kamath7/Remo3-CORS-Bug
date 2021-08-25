@@ -3,8 +3,9 @@ const cors = require('cors')
 const app = express()
 app.use(cors({
     origin: "*",
-    methods: ["GET","POST"] //only allows get and post methods
-}))
+    methods: ["GET","POST"], //only allows get and post methods
+    credentials: true
+ }))
 app.get('/data',(req,res)=>{
     res.send({food:'Prawns'})
 })
